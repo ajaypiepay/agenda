@@ -355,9 +355,7 @@ export class JobDbRepository {
 						returnDocument: 'after'
 					}
 				);
-				log(
-					`findOneAndUpdate(${props.name}) with type "single" updated/inserted entry \n%O`
-				);
+				log(`findOneAndUpdate(${props.name}) with type "single" updated/inserted entry \n%O`);
 				return this.processDbResult(job, result as IJobParameters<DATA>);
 			}
 
